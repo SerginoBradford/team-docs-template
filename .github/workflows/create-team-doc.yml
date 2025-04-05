@@ -8,6 +8,10 @@ jobs:
   create-repo:
     if: github.event.issue.title != ''
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      repository-projects: write
     steps:
       - name: Extract Team Name
         id: extract
